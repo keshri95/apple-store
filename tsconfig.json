@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "applestore/schemas/category.js", "applestore/schemas/index.js", "applestore/schemas/product.ts"],
   "exclude": ["node_modules"]
 }

@@ -13,20 +13,20 @@ const Landing = () => {
           <span className="block">Driven By Values</span>
         </h1>
 
-
         <div className="space-x-8">
-            <Button title='Buy Now'/>
+          <Button title="Buy Now" />
 
-            <a className="link">Learn More</a>
-
+          <a className="link">Learn More</a>
         </div>
       </div>
       <div className="relative hidden h-[450px] w-[450px] transition-all duration-500 md:inline lg:h-[650px] lg:w-[600px]">
-        <Image src="/iphone.png" alt="iphone"
-        //  layout="fill" 
-         fill
-         objectFit="contain" 
-         />
+        <Image
+          src="/iphone.png"
+          alt="iphone"
+          //  layout="fill"
+          fill
+          objectFit="contain"
+        />
       </div>
     </section>
   );
