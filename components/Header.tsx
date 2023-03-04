@@ -6,10 +6,12 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { selectBasketItems } from "../redux/basketSlice";
+import { signIn,signOut, useSession } from "next-auth/react";
+
 
 const Header = () => {
   const items = useSelector(selectBasketItems);
-  const session = false;
+  const { data: session} = useSession();
 
   return (
     <header className="sticky top-0 z-30 flex w-full items-center justify-between bg-[#E7ECEE] p-4">
@@ -49,17 +51,17 @@ const Header = () => {
 
         {session ? (
           <Image
-            src="https://images.unsplash.com/photo-1677297680113-d508d9d01eee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
+            src={session.user?.image || "https://images.unsplash.com/photo-1677297680113-d508d9d01eee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"}
             alt=""
             className="cursor-pointer rounded-full"
             width={34}
             height={34}
-            // onClick={() => signOut()}
+            onClick={() => signOut()}
           />
         ) : (
           <AiOutlineUser
             className="headerIcon"
-            //  onClick={() => signIn()}
+             onClick={() => signIn()}
           />
         )}
       </div>
