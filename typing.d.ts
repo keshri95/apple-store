@@ -12,6 +12,7 @@ interface Category {
 }
 
 interface Image {
+  url(): any;
   _key: string;
   _type: "image";
   asset: {
