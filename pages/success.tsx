@@ -3,8 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-// import {  } from "react-icons/ai";
-import Button from "@/components/Button";
+import Button from "../components/Button";
 import { useMediaQuery } from "react-responsive";
 import {
   AiOutlineShopping,
@@ -14,7 +13,7 @@ import {
 } from "react-icons/ai";
 import Currency from "react-currency-formatter";
 import { GetServerSideProps } from "next";
-import { fetchLineItems } from "@/utils/fetchLineItems";
+import { fetchLineItems } from "../utils/fetchLineItems";
 import { useSession } from "next-auth/react";
 
 interface Props {
@@ -85,7 +84,7 @@ function Success({ products }: Props) {
                 Order #{session_id?.slice(-5)}
               </p>
               <h4 className="text-lg">
-                Thank you{" "}
+                Thank you
                 {session ? session.user?.name?.split(" ")[0] : "Guest"}
               </h4>
             </div>

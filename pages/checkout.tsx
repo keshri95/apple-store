@@ -1,12 +1,11 @@
-/* eslint-disable react/jsx-key */
-import Header from "@/components/Header";
+import Header from "../components/Header";
 import { selectBasketItems, selectBaskeTotal } from "../redux/basketSlice";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
-import Button from "@/components/Button";
-import CheckoutProduct from "@/components/CheckoutProduct";
+import Button from "../components/Button";
+import CheckoutProduct from "../components/CheckoutProduct";
 import Currency from "react-currency-formatter";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { Stripe } from "stripe";
@@ -23,12 +22,12 @@ const Checkout = () => {
   );
 
   useEffect(() => {
-    const gropedItems = items.reduce((results, item) => {
+    const groupedItems = items.reduce((results, item) => {
       (results[item._id] = results[item._id] || []).push(item);
       return results;
     }, {} as { [key: string]: Product[] });
 
-    setGroupedItemsInBasket(gropedItems);
+    setGroupedItemsInBasket(groupedItems);
   }, [items]);
 
   const createCheckoutSession = async () => {
@@ -56,7 +55,7 @@ const Checkout = () => {
       sessionId: checkoutSession.id,
     });
 
-    console.warn(error.message);
+    // console.warn(error.message);
 
     setLoading(false);
 
