@@ -23,9 +23,8 @@ const Landing = () => {
         <Image
           src="/iphone.png"
           alt="iphone"
-          //  layout="fill"
           fill
-          objectFit="contain"
+          style={{objectFit: "contain"}}
         />
       </div>
     </section>

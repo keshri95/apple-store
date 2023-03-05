@@ -2,11 +2,9 @@ import { selectBasketItems, selectBaskeTotal } from "../redux/basketSlice";
 import Link from "next/link";
 import { AiOutlineShopping } from "react-icons/ai";
 import { useSelector } from "react-redux";
-// import { selectBaskeTotal } from "./redux/basketSlice";
 
 const Basket = () => {
   const items = useSelector(selectBasketItems);
-  //   const basketTotal = useSelector(selectBaskeTotal);
 
   if (items.length === 0) return null;
 

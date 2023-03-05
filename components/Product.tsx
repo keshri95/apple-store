@@ -31,7 +31,7 @@ function Product({ product }: Props) {
             <Image 
                 src={urlFor(product.image[0]).url()} 
                 fill
-                objectFit="contain"
+                style={{objectFit: "contain"}}
                 alt="product"
             />
         </div>

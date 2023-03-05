@@ -30,7 +30,7 @@ const CheckoutProduct = ({ id, items }: Props) => {
           src={urlFor(items[0].image[0]).url()}
           alt=""
           fill
-          objectFit="contain"
+          style={{objectFit: "contain"}}
         />
       </div>
 

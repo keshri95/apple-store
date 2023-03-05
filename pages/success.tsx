@@ -56,7 +56,7 @@ function Success({ products }: Props) {
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
               alt="img"
               fill
-              objectFit="contain"
+              style={{objectFit: "contain"}}
             />
           </div>
         </Link>
@@ -70,7 +70,7 @@ function Success({ products }: Props) {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
                 alt="img"
                 fill
-                objectFit="contain"
+                style={{objectFit: "contain"}}
               />
             </div>
           </Link>
@@ -166,7 +166,7 @@ function Success({ products }: Props) {
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
                             alt="img"
                             fill
-                            objectFit="contain"
+                            style={{objectFit: "contain"}}
                           />
                         </div>
                         <div className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-[gray] text-xs">

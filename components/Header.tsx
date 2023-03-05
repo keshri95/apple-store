@@ -22,7 +22,7 @@ const Header = () => {
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
               alt="img"
               fill
-              objectFit="contain"
+              style={{objectFit: "contain"}}
             />
           </div>
         </Link>
@@ -52,7 +52,7 @@ const Header = () => {
         {session ? (
           <Image
             src={session.user?.image || "https://images.unsplash.com/photo-1677297680113-d508d9d01eee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"}
-            alt=""
+            alt="img"
             className="cursor-pointer rounded-full"
             width={34}
             height={34}
